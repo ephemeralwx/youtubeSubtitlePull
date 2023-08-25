@@ -1,6 +1,6 @@
 import re
 import json
-youtube_link = "https://www.youtube.com/watch?v=cCzrJjn7p7U"
+youtube_link = "(insert youtube video url/link here)"
 video_id_match = re.search(r'v=([^&]+)', youtube_link)
 
 if video_id_match:
