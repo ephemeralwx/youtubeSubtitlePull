@@ -9,9 +9,11 @@ app = Flask(__name__)
 #data = {
 #    "youtube_link": "https://www.youtube.com/watch?v=cCzrJjn7p7U"
 #}
-@app.route('/get_subtitles', methods=['POST'])
+@app.route('/get_subtitles', methods=['GET'])
 def get_subtitles():
-    youtube_link = request.json.get('youtube_link', '')
+
+
+    youtube_link = request.args.get('youtube_link', '')
 
     video_id_match = re.search(r'v=([^&]+)', youtube_link)
     if not video_id_match:
