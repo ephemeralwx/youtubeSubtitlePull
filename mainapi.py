@@ -32,7 +32,10 @@ def get_subtitles():
     text_values = [item['text'] for item in data]
     coherent_sentence = ' '.join(text_values)
 
+    print("the following is printed:")
+    print(jsonify({"subtitles": coherent_sentence}), 200)
+    print("the following is returned:")
     return jsonify({"subtitles": coherent_sentence}), 200
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
